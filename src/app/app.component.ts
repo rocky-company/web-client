@@ -14,4 +14,5 @@ export class AppComponent {
   title = 'web-baptiste';
   private readonly productsSvc = inject(ProductsService);
   products$ = this.productsSvc.getAllProducts();
+  goApi$ = this.productsSvc.getBaptisteGoApi();
 }

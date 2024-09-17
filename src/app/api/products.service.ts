@@ -9,4 +9,8 @@ export class ProductsService {
   getAllProducts(): Observable<any> {
     return this._http.get('https://fakestoreapi.com/products');
   }
+
+  getBaptisteGoApi(): Observable<any> {
+    return this._http.get('http://localhost:5050/')
+  }
 }
