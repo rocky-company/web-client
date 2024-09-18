@@ -11,6 +11,6 @@ export class ProductsService {
   }
 
   getBaptisteGoApi(): Observable<any> {
-    return this._http.get('http://localhost:5050/')
+    return this._http.get('http://localhost:5050/');
   }
 }

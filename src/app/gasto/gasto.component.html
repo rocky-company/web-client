@@ -3,4 +3,32 @@
 } @else {
   <p>gasto works!</p>
 }
+<h1>Heidy</h1>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <label for="nombre">Nombre:</label>
+  <input id="nombre" formControlName="nombre" />
+  <div *ngIf="myForm.get('nombre')?.invalid && myForm.get('nombre')?.touched">
+    Name is required and must be at least 3 characters.
+  </div>
+
+  <label for="costoDelGasto">costoDelGasto:</label>
+  <input id="costoDelGasto" formControlName="costoDelGasto" />
+  <div *ngIf="myForm.get('costoDelGasto')?.invalid && myForm.get('costoDelGasto')?.touched">
+    Please enter a valid costoDelGasto.
+  </div>
+
+  <label for="lugar">lugar:</label>
+  <input id="lugar" formControlName="lugar" />
+  <div *ngIf="myForm.get('lugar')?.invalid && myForm.get('lugar')?.touched">
+    lugar must be at least 18.
+  </div>
+
+  <label for="categoria">categoria:</label>
+  <input id="categoria" formControlName="categoria" />
+  <div *ngIf="myForm.get('categoria')?.invalid && myForm.get('categoria')?.touched">
+    Name is required and must be at least 3 characters.
+  </div>
+
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>
 
